@@ -5,7 +5,7 @@
     font-family: 'Poppins';
     font-size: 30px;
     font-weight: 500;
-    color: #ff4c0a;
+    color: #0765DA;
     margin-bottom: 13px;
 }
 .our{
@@ -19,7 +19,7 @@
     display: inline;
     font-size: 34px;
     font-weight: bold;
-    color: #ff4c0a;
+    color: #0765DA;
 }
 .grp_btn{
     margin-top: 40px;
@@ -37,11 +37,11 @@
     cursor: pointer;
 }
 .filter:hover{
-    color: #ff4c0a;
+    color: #0765DA;
     font-weight: bold;
 }
 .active{
-    color: #ff4c0a;
+    color: #0765DA;
     font-weight: bold;
 }
 .img{

@@ -12,7 +12,7 @@ const SMediaServices = () =>{
                 <div className="row mt-5 mx-0 flex-column-reverse flex-md-row">
                     <div className="col-md-6 px-0">
                         <div className={styles.topContain}>
-                            <p className={`${styles.headTop}`}>Social <span style={{color:'#ff4c0a'}}>Media</span></p>
+                            <p className={`${styles.headTop}`}>Social <span style={{color:'#0765DA'}}>Media</span></p>
                             <p className={styles.headTop}>Marketing</p>
                             <p className={styles.identityTop}>Identity on Social Media</p>
                             <p className={styles.content}>More than ever users are seeking information and basing decisions on their peers’ advice and opinions. Customers head to your Facebook and Twitter sometimes based on a post or a re-tweet. Let your brand identity on social media be consistent with the brand you have worked so hard to develop.</p>

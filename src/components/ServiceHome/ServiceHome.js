@@ -13,7 +13,7 @@ const ServiceHome = (props) => {
                 <HiOutlineArrowNarrowRight
                     className={styles.to}
                     size="2rem"
-                    color="#ff4c0a"
+                    color="#0765DA"
                 />
             </Link>
         </div>

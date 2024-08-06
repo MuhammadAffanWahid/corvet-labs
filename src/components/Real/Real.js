@@ -1,13 +1,13 @@
 import React from "react";
 import styles from './Real.module.css';
-import improveImg from '../../assets/home/improves.png';
+import customerCare from '../../assets/home/customerCare.png';
 
 const Real = () =>{
     return(
         <div className="mb-5 overflow-hidden">
             <div className="row g-0">
                 <div className={`col-md-6 ${styles.imgDiv}`}>
-                    <img data-aos='slide-right' data-aos-offset="150" src={improveImg} alt="" className={styles.img}/>
+                    <img data-aos='slide-right' data-aos-offset="150" src={customerCare} alt="" className={styles.img}/>
                 </div>
                 <div className="col-md-6">
                     <div className={styles.text}>
