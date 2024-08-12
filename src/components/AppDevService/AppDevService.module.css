@@ -1,0 +1,46 @@
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .floatAnimation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .arrowIcon {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the border circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow properties */
+    padding:4px;
+    padding-top:7px;
+    margin-bottom:-35px;
+    background-color: #fff;
+    fill: #8B98A4; 
+  }
+
+  .maxWidthText {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    margin-top: 30px;
+  }
+
+
+  .svgKeyWrapper {
+    position: absolute;
+    z-index: 10; /* Ensure it is above other elements */
+    top: 300px;   /* Adjust positioning as needed */
+    left: 150px;  /* Adjust positioning as needed */
+  }
+  
+  .svgKey {
+    width: 50px; /* Adjust size as needed */
+    height:50px;
+    height: auto;
+  }

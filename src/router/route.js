@@ -5,6 +5,7 @@ import IndividualService from "../views/individualService";
 import AboutUs from '../views/aboutUs';
 import ProjectDetails from "../views/projectDetails";
 import SMediaService from '../views/sMediaService';
+import AppDevService from '../views/AppDevService';
 
 const routes = [
     {
@@ -34,6 +35,10 @@ const routes = [
     {
         components: <SMediaService />,
         to: '/sMediaService'
+    },
+    {
+        components: <AppDevService />,
+        to: '/AppDevService'
     }
 ];
 
