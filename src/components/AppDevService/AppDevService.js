@@ -1,11 +1,8 @@
 import React from "react";
 import styles from "./AppDevService.module.css";
 import { Helmet } from "react-helmet";
-import logoDark from "../../assets/AppDevService/logo-dark.png";
-import favicon from "../../assets/AppDevService/favicon.ico";
 import mobileImg from "../../assets/AppDevService/app/mobile.png";
 import mobile_4 from "../../assets/AppDevService/app/mobile-4.png";
-import mobile_2 from "../../assets/AppDevService/app/mobile-2.png";
 import mobile_3 from "../../assets/AppDevService/app/mobile-3.png";
 import amazonLogo from "../../assets/AppDevService/client/amazon.svg";
 import googleLogo from "../../assets/AppDevService/client/google.svg";
