@@ -61,7 +61,7 @@ const AppDevService = () => {
                   page.
                 </p>
                 <div className="watch-video mt-4">
-                  <a href="javascript:void(0)" className="btn btn-primary mb-2">
+                  <a href="/" className="btn btn-primary mb-2">
                     Get Started
                   </a>
                 </div>
@@ -273,13 +273,13 @@ const AppDevService = () => {
                 </ul>
                 <div className="watch-video mt-4">
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     className="btn btn-primary mb-2 me-2"
                   >
                     Read More
                   </a>
                   <a
-                    href="#"
+                    href="/"
                     data-type="youtube"
                     data-id="yba7hPeTSjk"
                     className="video-play-icon lightbox watch title-dark text-dark mb-2"
@@ -392,7 +392,7 @@ const AppDevService = () => {
               </div>
 
               <div className="mt-4 pt-2">
-                <a href="javascript:void(0)" className="btn btn-primary">
+                <a href="/" className="btn btn-primary">
                   See More{" "}
                   <i data-feather="chevron-right" className="fea icon-sm"></i>
                 </a>
@@ -692,13 +692,13 @@ const AppDevService = () => {
                 </p>
                 <div className="mt-4 mb-4">
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     className="btn btn-lg btn-primary mt-2 me-2"
                   >
                     <i className="mdi mdi-apple"></i> App Store
                   </a>
                   <a
-                    href="javascript:void(0)"
+                    href="/"
                     className="btn btn-lg btn-primary mt-2"
                   >
                     <i className="mdi mdi-google-play"></i> Play Store
@@ -714,7 +714,7 @@ const AppDevService = () => {
                     <div className="content">
                       <p className="mb-0">Install app now on your cellphones</p>
                       <a
-                        href="javascript:void(0)"
+                        href="/"
                         className="text-primary small"
                       >
                         Learn More <i className="mdi mdi-arrow-right"></i>
