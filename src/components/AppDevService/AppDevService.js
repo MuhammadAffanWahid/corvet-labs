@@ -15,6 +15,8 @@ import download_svg from "../../assets/AppDevService/download.svg";
 import key from "../../assets/AppDevService/key.svg";
 import signal from "../../assets/AppDevService/signal.svg";
 import left_right from "../../assets/AppDevService/left-right.svg";
+import corvet from "../../assets/AppDevService/corvet.png";
+
 
 const AppDevService = () => {
   return (
@@ -51,6 +53,7 @@ const AppDevService = () => {
           <div className="row align-items-center mb-5 pb-5">
             <div className="col-lg-7 col-md-6">
               <div className="title-heading text-left">
+              <img src={corvet} height="35" alt="">
                 <h1 className="heading mb-3 mt-2">
                   Make <span className="text-primary">everything</span> <br />{" "}
                   organize with us
