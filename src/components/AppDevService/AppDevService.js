@@ -17,7 +17,6 @@ import signal from "../../assets/AppDevService/signal.svg";
 import left_right from "../../assets/AppDevService/left-right.svg";
 import corvet from "../../assets/AppDevService/corvet.png";
 
-
 const AppDevService = () => {
   return (
     <div>
@@ -49,11 +48,11 @@ const AppDevService = () => {
         className="bg-half-170 app-home-wrapper d-table w-100 overflow-hidden"
         id="home"
       >
-        <div className="container pt-5 mt-5">
+        <div className="container pt-2 mt-5">
           <div className="row align-items-center mb-5 pb-5">
-            <div className="col-lg-7 col-md-6">
-              <div className="title-heading text-left">
-              <img src={corvet} height="35" alt="">
+            <div className="col-lg-7 col-md-6 text-start">
+              <div className="title-heading text-start">
+                <img src={corvet} height="50" alt="" className="" />
                 <h1 className="heading mb-3 mt-2">
                   Make <span className="text-primary">everything</span> <br />{" "}
                   organize with us
@@ -70,6 +69,7 @@ const AppDevService = () => {
                 </div>
               </div>
             </div>
+
             <div className="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0 mb-5">
               <img
                 src={mobileImg}
@@ -275,10 +275,7 @@ const AppDevService = () => {
                   </li>
                 </ul>
                 <div className="watch-video mt-4">
-                  <a
-                    href="/"
-                    className="btn btn-primary mb-2 me-2"
-                  >
+                  <a href="/" className="btn btn-primary mb-2 me-2">
                     Read More
                   </a>
                   <a
@@ -694,16 +691,10 @@ const AppDevService = () => {
                   by the readable content of a page when looking at its layout.
                 </p>
                 <div className="mt-4 mb-4">
-                  <a
-                    href="/"
-                    className="btn btn-lg btn-primary mt-2 me-2"
-                  >
+                  <a href="/" className="btn btn-lg btn-primary mt-2 me-2">
                     <i className="mdi mdi-apple"></i> App Store
                   </a>
-                  <a
-                    href="/"
-                    className="btn btn-lg btn-primary mt-2"
-                  >
+                  <a href="/" className="btn btn-lg btn-primary mt-2">
                     <i className="mdi mdi-google-play"></i> Play Store
                   </a>
                 </div>
@@ -716,10 +707,7 @@ const AppDevService = () => {
                     ></i>
                     <div className="content">
                       <p className="mb-0">Install app now on your cellphones</p>
-                      <a
-                        href="/"
-                        className="text-primary small"
-                      >
+                      <a href="/" className="text-primary small">
                         Learn More <i className="mdi mdi-arrow-right"></i>
                       </a>
                     </div>
