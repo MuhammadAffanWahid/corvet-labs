@@ -259,6 +259,7 @@ const TabbedGallery = () => {
           <div key={index} className={styles.imageBox}>
             <img
               src={item.src}
+              alt={`${index}`}
               className={styles.image}
             />
             <div className={styles.imageLabel}>{item.label}</div>
