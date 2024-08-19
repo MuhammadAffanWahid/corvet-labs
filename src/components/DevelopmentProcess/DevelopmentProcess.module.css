@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.wrapper {
+  display: flex;
+  max-width: 80rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.leftColumn {
+  width: 50%;
+  padding: 2rem; /* Increased padding for better alignment */
+}
+
+.rightColumn {
+  width: 50%;
+  padding: 2rem; /* Increased padding for better alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem; /* Slightly larger font size */
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 2rem;
+}
+
+.stepItem {
+  background-color: #f3f4f6; /* gray-100 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Add transition for smoother interaction */
+}
+
+.stepItem:hover {
+  background-color: #e5e7eb; /* Slight hover effect */
+}
+
+.stepTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937; /* gray-800 */
+}
+
+.stepNumber {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2563eb; /* blue-600 */
+}
+
+.stepIcon {
+  font-size: 1.5rem;
+  color: #6b7280; /* gray-500 */
+}
+
+.expandedContent {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 0.5rem;
+  color: #4b5563; /* gray-600 */
+}
+
+.image {
+  width: 24rem; /* 384px */
+  height: 24rem;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Add transition for better responsiveness */
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column; /* Stack columns on top of each other */
+  }
+
+  .leftColumn, .rightColumn {
+    width: 100%; /* Full width for both columns */
+    padding: 1rem; /* Reduce padding for mobile */
+  }
+
+  .title {
+    font-size: 1.25rem; /* Smaller font size for title */
+    text-align: center; /* Center the title */
+  }
+
+  .description {
+    font-size: 0.875rem; /* Smaller font size for description */
+    text-align: center; /* Center the description */
+  }
+
+  .stepItem {
+    padding: 0.75rem; /* Reduce padding for steps */
+  }
+
+  .stepTitle {
+    font-size: 1rem; /* Slightly smaller font size */
+  }
+
+  .stepNumber {
+    font-size: 0.75rem; /* Smaller font size */
+  }
+
+  .stepIcon {
+    font-size: 1.25rem; /* Smaller icon size */
+  }
+
+  .image {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-top: 1rem; /* Add margin to separate from the text */
+  }
+}

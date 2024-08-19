@@ -3,6 +3,8 @@ import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import styles from "./NavbarMain.module.css";
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import corvet from "../../assets/AppDevService/corvet.png";
+
 const NavbarMain = () => {
 
   const [show, setShow] = useState(false);
@@ -53,7 +55,8 @@ const NavbarMain = () => {
       >
         <Container>
           <Navbar.Brand href="/" className={styles.logo}>
-            Corvet Labs
+          <img src={corvet} height="60" alt="" className="pb-2" />
+           orvet Labs
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -93,7 +96,7 @@ const NavbarMain = () => {
               >
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/sMediaService" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>Social Media Marketing</NavLink></NavDropdown.Item>
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/AppDevService" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>App Development</NavLink></NavDropdown.Item>
-                <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>Cloud and IoT Based Solutions</NavLink></NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/WebDevService" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>Web Development</NavLink></NavDropdown.Item>
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>IT Consultancy</NavLink></NavDropdown.Item>
                 <NavDropdown.Item className={styles.dropdownItem}><NavLink to="/hello" onClick={() => {handleActiveNav(2); closeNav()}} className={styles.dropdownText}>AI Solutions</NavLink></NavDropdown.Item>
 

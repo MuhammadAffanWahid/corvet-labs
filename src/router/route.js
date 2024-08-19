@@ -6,6 +6,7 @@ import AboutUs from '../views/aboutUs';
 import ProjectDetails from "../views/projectDetails";
 import SMediaService from '../views/sMediaService';
 import AppDevService from '../views/AppDevService';
+import WebDevService from '../views/WebDevService';
 
 const routes = [
     {
@@ -39,6 +40,10 @@ const routes = [
     {
         components: <AppDevService />,
         to: '/AppDevService'
+    },
+    {
+        components: <WebDevService />,
+        to: '/WebDevService'
     }
 ];
 

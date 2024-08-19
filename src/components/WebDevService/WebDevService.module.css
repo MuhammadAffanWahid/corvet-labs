@@ -1,0 +1,138 @@
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .floatAnimation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .arrowIcon {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the border circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow properties */
+    padding:4px;
+    padding-top:7px;
+    margin-bottom:-35px;
+    background-color: #fff;
+    fill: #8B98A4; 
+  }
+
+  .maxWidthText {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    margin-top: 30px;
+  }
+
+
+  .svgKeyWrapper {
+    position: absolute;
+    z-index: 10; /* Ensure it is above other elements */
+    top: 300px;   /* Adjust positioning as needed */
+    left: 150px;  /* Adjust positioning as needed */
+  }
+  
+  .svgKey {
+    width: 50px; /* Adjust size as needed */
+    height:50px;
+    height: auto;
+  }
+
+
+  /* //////////////   Services copied start */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top:70px;
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 2.0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s ease;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #e8e4e4;
+  }
+  
+  .card:hover {
+    border: 1px solid #007bff;
+  }
+  
+  .icon {
+    /* font-size: 2.5rem; */
+    margin-bottom: 1rem;
+    width:60px;
+  }
+  
+  .industryName {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* //////////////   Services copied */

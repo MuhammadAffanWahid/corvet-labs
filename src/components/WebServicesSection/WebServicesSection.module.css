@@ -1,0 +1,83 @@
+.section {
+    text-align: center;
+    padding: 80px 4px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    width: 85%; /* Decreased width to 70% */
+    margin: 0 auto; /* Center the container */
+}
+
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 270px; /* Fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    width: 100px; /* Increased image size */
+    height: 100px; /* Increased image size */
+    margin: 0 auto 15px; /* Center the icon and add space below */
+}
+
+.serviceTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+.serviceDescription {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+    
+    .serviceDescription {
+        display: none; /* Hide description on tablet and mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+    
+    .serviceDescription {
+        display: none; /* Hide description on mobile */
+    }
+}
