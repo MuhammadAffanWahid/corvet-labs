@@ -153,7 +153,7 @@ const AppDevService = () => {
       <div className={styles.grid}>
         {industries.map((industry, index) => (
           <div key={index} className={styles.card}>
-            <img className={styles.icon} src={industry.icon}/>
+            <img className={styles.icon} alt={index} src={industry.icon}/>
             <p className={styles.industryName}>{industry.name}</p>
           </div>
         ))}
