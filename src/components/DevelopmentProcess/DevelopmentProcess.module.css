@@ -1,135 +1,143 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 1.25rem;
-  background-color: #f9fafb; /* gray-50 */
+  padding: 2rem 1rem;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+/* .description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+} */
+.description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  max-width: 55rem; /* Set the maximum width */
+  margin-left: auto; /* Center the description */
+  margin-right: auto; /* Center the description */
 }
 
 .wrapper {
   display: flex;
-  max-width: 80rem;
+  max-width: 60rem;
   width: 100%;
+  margin: 0 auto;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   background-color: #ffffff;
 }
 
-.leftColumn {
-  width: 50%;
-  padding: 2rem; /* Increased padding for better alignment */
-}
-
+.leftColumn,
 .rightColumn {
   width: 50%;
-  padding: 2rem; /* Increased padding for better alignment */
+  padding: 1.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.title {
-  font-size: 1.5rem; /* Slightly larger font size */
-  font-weight: 700;
-  color: #1f2937; /* gray-800 */
-  margin-bottom: 1.5rem;
-}
-
-.description {
-  font-size: 1rem;
-  color: #6b7280; /* gray-500 */
-  margin-bottom: 2rem;
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .stepItem {
-  background-color: #f3f4f6; /* gray-100 */
+  background-color: #f3f4f6;
   padding: 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s ease; /* Add transition for smoother interaction */
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
 .stepItem:hover {
-  background-color: #e5e7eb; /* Slight hover effect */
+  background-color: #e5e7eb;
+}
+
+.stepNumber {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .stepTitle {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1f2937; /* gray-800 */
-}
-
-.stepNumber {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #2563eb; /* blue-600 */
-}
-
-.stepIcon {
-  font-size: 1.5rem;
-  color: #6b7280; /* gray-500 */
+  color: #1f2937;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .expandedContent {
   margin-top: 0.5rem;
-  padding: 1rem;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb; /* gray-200 */
-  border-radius: 0.5rem;
-  color: #4b5563; /* gray-600 */
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #4b5563;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.rightColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image {
-  width: 24rem; /* 384px */
-  height: 24rem;
-  object-fit: cover;
-  transition: transform 0.3s ease; /* Add transition for better responsiveness */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    flex-direction: column; /* Stack columns on top of each other */
+    flex-direction: column;
   }
 
-  .leftColumn, .rightColumn {
-    width: 100%; /* Full width for both columns */
-    padding: 1rem; /* Reduce padding for mobile */
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    padding: 1rem;
   }
 
   .title {
-    font-size: 1.25rem; /* Smaller font size for title */
-    text-align: center; /* Center the title */
+    font-size: 1.5rem;
   }
 
   .description {
-    font-size: 0.875rem; /* Smaller font size for description */
-    text-align: center; /* Center the description */
+    font-size: 0.875rem;
   }
 
   .stepItem {
-    padding: 0.75rem; /* Reduce padding for steps */
+    padding: 0.75rem;
   }
 
   .stepTitle {
-    font-size: 1rem; /* Slightly smaller font size */
+    font-size: 1rem;
   }
 
   .stepNumber {
-    font-size: 0.75rem; /* Smaller font size */
-  }
-
-  .stepIcon {
-    font-size: 1.25rem; /* Smaller icon size */
-  }
-
-  .image {
-    width: 100%; /* Full width for the image */
-    height: auto; /* Auto height to maintain aspect ratio */
-    margin-top: 1rem; /* Add margin to separate from the text */
+    font-size: 0.75rem;
   }
 }

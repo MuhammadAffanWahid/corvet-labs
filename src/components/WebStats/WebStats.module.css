@@ -1,0 +1,74 @@
+/* index.module.css */
+
+.statsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure that all tiles stretch equally */
+    padding: 0; /* Remove padding to eliminate space between tiles */
+    background-color: #ffffff;
+    max-width: 75rem; /* Ensure container is responsive */
+    margin: 0 auto; /* Center the container */
+    margin-top: 50px; /* Adjust top margin for spacing */
+    flex-wrap: wrap; /* Allow tiles to wrap on smaller screens */
+  }
+  
+  .statCard {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px; /* Remove border-radius for normal cards */
+    border: 1px solid #e0e0e0; /* Border around the outside */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow around the outside */
+    flex: 1;
+    margin: 10px; /* Margin between tiles */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    width: calc(25% - 20px); /* Width of tiles with space for margins */
+    height: 200px; /* Fixed height for each tile */
+  }
+  
+
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .statCard {
+      width: calc(50% - 20px); /* Adjust width for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+       padding: 15px;
+
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .statCard {
+      width: calc(100% - 20px); /* Full width for very small screens */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 10px;
+
+    }
+  }
+  
+  .iconWrapper {
+    font-size: 48px;
+    color: #0070f3; /* Replace with your icon color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0070f3;
+    border-radius: 50%;
+    width: 80px; /* Fixed width for icons */
+    height: 80px; /* Fixed height for icons */
+    margin: 0 auto 10px; /* Adjusted margin */
+  }
+  
+  .number {
+    font-size: 24px; /* Adjusted font size to fit within the tile */
+    font-weight: 700;
+    margin: 10px 0;
+    color: #1a1a1a;
+  }
+  
+  .description {
+    font-size: 12px; /* Adjusted font size to fit within the tile */
+    color: #555555;
+  }
+  

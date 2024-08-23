@@ -27,6 +27,7 @@ import Ondemand from "../../assets/AppDevService/ondemand.svg";
 import TechStack from "../../components/TechStack";
 import WebServicesSection from "../../components/WebServicesSection";
 import DevelopmentProcess from "../../components/DevelopmentProcess";
+import WebStats from "../../components/WebStats";
  
 
 
@@ -172,6 +173,12 @@ const AppDevService = () => {
 
       {/* DevelopmentProcess Start */}
       <DevelopmentProcess />
+      {/* DevelopmentProcess end */}
+
+
+
+      {/* DevelopmentProcess Start */}
+      <WebStats />
       {/* DevelopmentProcess end */}
 
       <section className="section overflow-hidden mt-5 pt-5" id="service">

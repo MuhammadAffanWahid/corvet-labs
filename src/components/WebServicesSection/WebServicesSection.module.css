@@ -4,13 +4,13 @@
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 3rem;
     max-width: 800px;
     margin-left: auto;
