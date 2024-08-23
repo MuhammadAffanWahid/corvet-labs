@@ -24,10 +24,12 @@ import RealEstate from "../../assets/AppDevService/realestate.svg";
 import Education from "../../assets/AppDevService/education.svg";
 import Delivery from "../../assets/AppDevService/delivery.svg";
 import Ondemand from "../../assets/AppDevService/ondemand.svg";
-import TechStack from "../../components/TechStack";
-import WebServicesSection from "../../components/WebServicesSection";
-import DevelopmentProcess from "../../components/DevelopmentProcess";
-import WebStats from "../../components/WebStats";
+import TechStack from "../TechStack";
+import WebServicesSection from "../WebServicesSection";
+import DevelopmentProcess from "../DevelopmentProcess";
+import WebStats from "../WebStats";
+import WhyUs from "../WhyUsWeb";
+import FAQ from "../FAQ";
  
 
 
@@ -177,9 +179,18 @@ const AppDevService = () => {
 
 
 
-      {/* DevelopmentProcess Start */}
+      {/* WebStats Start */}
       <WebStats />
-      {/* DevelopmentProcess end */}
+      {/* WebStats end */}
+
+
+      {/* WhyUs Start */}
+      <WhyUs />
+      {/* WhyUs end */}
+
+      {/* FAQ Start */}
+      <FAQ />
+      {/* FAQ end */}
 
       <section className="section overflow-hidden mt-5 pt-5" id="service">
         {/* Work Process Start */}

@@ -1,0 +1,137 @@
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.columnsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/WhyUsWeb/tick.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .columnsContainer {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .column {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+  }
+
+  .list {
+    font-size: 0.95rem;
+  }
+
+  .list li {
+    padding-left: 25px;
+  }
+
+  .list li::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .list {
+    font-size: 0.9rem;
+  }
+
+  .list li {
+    padding-left: 20px;
+  }
+
+  .list li::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+}

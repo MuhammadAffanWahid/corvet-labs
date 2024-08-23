@@ -8,7 +8,8 @@
     background-color: #ffffff;
     max-width: 75rem; /* Ensure container is responsive */
     margin: 0 auto; /* Center the container */
-    margin-top: 50px; /* Adjust top margin for spacing */
+    margin-top: 100px; /* Adjust top margin for spacing */
+    margin-bottom: 100px; /* Adjust top margin for spacing */
     flex-wrap: wrap; /* Allow tiles to wrap on smaller screens */
   }
   
