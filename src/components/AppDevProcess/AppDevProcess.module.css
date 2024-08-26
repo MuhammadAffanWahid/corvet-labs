@@ -1,0 +1,172 @@
+.container {
+  padding: 40px 20px;
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom:100px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #10131E;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #767676;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.process {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #10131E;
+  line-height: 2.5;
+  position: sticky;
+  top: 20px;
+  z-index: 1; /* Ensures that the steps section remains on top */
+  background-color: white; /* Add background to prevent overlay text from showing through */
+}
+
+.steps p {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  border:1px solid #017BFE;
+  border-radius: 0.8rem;
+  margin-top:4px;
+}
+
+.steps p:hover {
+  color: #017BFE;
+  font-size: 1.2rem;
+}
+
+.activeStep {
+  color: #017BFE;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.description {
+  flex: 2;
+  background-color: #F8F8F8;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #017BFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 300px; /* Increased min-height to ensure consistent box size */
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 0; /* Ensures that the description box is behind the steps section */
+  height:100%;
+}
+
+.text h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #10131E;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.125rem;
+  color: #767676;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .process {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .steps {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%; /* Ensure steps take full width on smaller screens */
+  }
+
+  .steps p {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #017BFE; /* Added border for better visibility */
+    border-radius: 8px;
+    flex: 1 1 45%; /* Flexbox for better wrapping on mobile */
+    margin: 0.25rem;
+  }
+
+  .activeStep {
+    font-size: 1.1rem;
+    background-color: #017BFE;
+    color: white; /* Set text color to white for active step on mobile */
+  }
+
+  .steps p:hover {
+    color: #FFF;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    min-height: 300px; /* Ensure consistent box size across descriptions */
+  }
+
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+
+  .text h2 {
+    font-size: 1.25rem;
+  }
+
+  .text p {
+    font-size: 0.875rem;
+  }
+}
