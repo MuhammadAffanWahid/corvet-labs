@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './AppDevHeroSection.module.css';
-import heroImage from "../../assets/AppDev/hero-section.png";
 import mobileImg from "../../assets/AppDevService/app/mobile.png";
 
 const AppDevHeroSection = () => {
