@@ -31,6 +31,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  height:100%;
 }
 
 .steps {
@@ -45,6 +46,7 @@
   top: 20px;
   z-index: 1; /* Ensures that the steps section remains on top */
   background-color: white; /* Add background to prevent overlay text from showing through */
+  margin: auto 0;
 }
 
 .steps p {
@@ -114,7 +116,8 @@
     text-align: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    width: 100%; /* Ensure steps take full width on smaller screens */
+    width: 100%;
+    align-items:center;
   }
 
   .steps p {
