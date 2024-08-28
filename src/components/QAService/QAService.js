@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import HeroSection from "../AppDevHeroSection";
-import WyUsAppPage from "../WyUsAppPage";
+import QAHero from "../QAHero";
+import QAServiceSection from "../QAServiceSection";
 import AppDevProcess from "../AppDevProcess";
 import AppFeatureGrid from "../AppFeatureGrid";
 import AppTechStack from "../AppTechStack";
@@ -34,20 +34,12 @@ const AppDevService = () => {
       </Helmet>
 
       {/* Hero Start */}
-      <HeroSection />
+      <QAHero/>
       {/* Hero End */}
 
       {/* WhyUsApp Start */}
-      <WyUsAppPage />
+      <QAServiceSection />
       {/* WhyUsApp End */}
-
-      {/* AppDevProcess Start */}
-      <AppDevProcess />
-      {/* AppDevProcess End */}
-
-      {/* AppFeatureGrid Start */}
-      <AppFeatureGrid />
-      {/* AppFeatureGrid End */}
 
       {/* AppTechStack Start */}
       <AppTechStack />

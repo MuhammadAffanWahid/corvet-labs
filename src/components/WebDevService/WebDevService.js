@@ -19,7 +19,7 @@ import Education from "../../assets/AppDevService/education.svg";
 import Delivery from "../../assets/AppDevService/delivery.svg";
 import Ondemand from "../../assets/AppDevService/ondemand.svg";
 import TechStack from "../TechStack";
-import WebServicesSection from "../WebServicesSection";
+import WebServiceSection from "../WebServiceSection";
 import DevelopmentProcess from "../DevelopmentProcess";
 import WebStats from "../WebStats";
 import WhyUs from "../WhyUsWeb";
@@ -162,9 +162,9 @@ const AppDevService = () => {
       <TechStack />
       {/* TechStack end */}
 
-      {/* WebServicesSection Start */}
-      <WebServicesSection />
-      {/* WebServicesSection end */}
+      {/* WebServiceSection Start */}
+      <WebServiceSection />
+      {/* WebServiceSection end */}
 
 
       {/* DevelopmentProcess Start */}

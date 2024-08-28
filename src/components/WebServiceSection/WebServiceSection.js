@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./WebServicesSection.module.css";
-import frontend from "../../assets/WebServicesSection/frontend.svg";
-import backend from "../../assets/WebServicesSection/backend.svg";
-import designing from "../../assets/WebServicesSection/designing.svg";
-import management from "../../assets/WebServicesSection/management.svg";
-import quality_assurance from "../../assets/WebServicesSection/quality_assurance.svg";
+import styles from "./WebServiceSection.module.css";
+import frontend from "../../assets/WebServiceSection/frontend.svg";
+import backend from "../../assets/WebServiceSection/backend.svg";
+import designing from "../../assets/WebServiceSection/designing.svg";
+import management from "../../assets/WebServiceSection/management.svg";
+import quality_assurance from "../../assets/WebServiceSection/quality_assurance.svg";
 
-const WebServicesSection = () => {
+const WebServiceSection = () => {
   const services = [
     {
       id: 1,
@@ -66,4 +66,4 @@ const WebServicesSection = () => {
   );
 };
 
-export default WebServicesSection;
+export default WebServiceSection;
