@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import QAHero from "../QAHero";
 import QAServiceSection from "../QAServiceSection";
-import AppDevProcess from "../AppDevProcess";
-import AppFeatureGrid from "../AppFeatureGrid";
 import AppTechStack from "../AppTechStack";
 import FAQApp from "../FAQApp";
 
