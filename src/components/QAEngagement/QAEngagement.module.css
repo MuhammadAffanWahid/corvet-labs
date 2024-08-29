@@ -1,0 +1,88 @@
+.qaEngagementSection {
+  padding: 50px 15px; /* Further reduced padding to decrease the height more */
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  text-align: center;
+  border-radius: 20px; /* Rounded corners */
+  max-width: 70rem;
+  margin: 150px auto; /* Adjusted margin to align with reduced height */
+  position: relative;
+  overflow: visible; /* Allows elements to overflow */
+  height:15rem;
+  
+}
+
+.heading {
+  /* margin-top:100px; */
+  font-size: 2.2rem; /* Slightly reduced font size to save space */
+  margin-bottom: 10px; /* Further adjusted margin to reduce overall height */
+  color: #fff;
+  font-weight: bold;
+}
+
+.subheading {
+  font-size: 1rem; /* Slightly reduced font size to save space */
+  color: #d1e9ff;
+  max-width: 60%; 
+  margin: 0 auto;
+  font-weight: 500;
+  margin-bottom: 20px; /* Further adjusted margin to reduce overall height */
+
+}
+
+.modelsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  top: 40%; /* Adjusted to push the tiles slightly less out of the blue section */
+  transform: translateY(20%);
+  z-index: 1;
+}
+
+.modelCard {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px; /* Reduced padding inside the card */
+  width: 280px; /* Slightly reduced card width */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modelCard:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  width: 50px; /* Slightly reduced icon size */
+  height: auto;
+  margin-bottom: 10px; /* Reduced margin below the icon */
+}
+
+.modelTitle {
+  font-size: 1.1rem; /* Slightly reduced font size */
+  font-weight: 600;
+  color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .qaEngagementSection {
+      padding: 20px 15px; /* Consistent padding reduction on mobile */
+      margin: 100px auto;
+      height: auto; /* Consistent height reduction on mobile */
+  }
+
+  .modelsContainer {
+      top: 0; /* Position tiles normally */
+      transform: translateY(0);
+  }
+
+  .modelCard {
+      width: 100%;
+      margin-bottom: 15px; /* Slightly reduced margin between tiles */
+  }
+}

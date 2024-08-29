@@ -1,0 +1,125 @@
+.qaStatsSection {
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  padding: 35px 45px;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.textContainer {
+  max-width: 55%; /* Adjusted to give more space to the text */
+}
+
+.heading {
+  font-size: 2rem; /* Matched font size */
+  line-height: 1.4; /* Adjusted line height */
+  font-weight: 700; /* Set to bold */
+  margin-bottom: 30px; /* Adjusted margin */
+}
+
+.ctaButton {
+  background-color: #ffc107; /* Yellow background */
+  color: #000; /* Black text */
+  padding: 15px 30px; /* Adjusted padding for the button */
+  border-radius: 50px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  font-weight: 600; /* Semi-bold font weight */
+  font-size: 1rem; /* Adjusted font size */
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ffb300; /* Slightly darker yellow on hover */
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  gap: 20px; /* Space between stats */
+}
+
+.stat {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.statNumber {
+  font-size: 3rem; /* Larger font size for the number */
+  font-weight: 700; /* Bold font weight */
+  margin-bottom: 5px;
+}
+
+.statDescription {
+  font-size: 1.2rem; /* Larger font for description */
+  font-weight: 500; /* Medium font weight */
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .qaStatsSection {
+    flex-direction: column; /* Stack containers vertically */
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .contentContainer {
+    flex-direction: column; /* Stack text and stats containers */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .textContainer {
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align text on mobile */
+  }
+
+  .statsContainer {
+    align-items: center;
+    text-align: center; /* Center-align stats */
+    width: 100%; /* Full width for stats container */
+  }
+
+  .stat {
+    width: 100%; /* Full width for each stat */
+    margin-bottom: 15px;
+  }
+
+  .ctaButton {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem; /* Smaller font size on very small screens */
+  }
+
+  .statNumber {
+    font-size: 2.5rem; /* Reduce size on smaller screens */
+  }
+
+  .statDescription {
+    font-size: 1rem; /* Slightly smaller font for description */
+  }
+}

@@ -1,0 +1,64 @@
+.qaFeaturesSection {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+  max-width: 80rem;
+  margin: 100px auto;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.featureCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(25% - 40px);
+  max-width: calc(25% - 40px);
+  box-sizing: border-box;
+  transition: border 0.2s ease-in-out;
+  border: 1px solid transparent; /* Default border */
+}
+
+.featureCard:hover {
+  border: 1px solid #007bff; /* Blue border on hover */
+}
+
+.icon {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.featureTitle {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .featureCard {
+      flex: 1 1 calc(50% - 30px); /* Two cards per row on medium screens */
+      max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .featureCard {
+      flex: 1 1 100%; /* One card per row on small screens */
+      max-width: 100%;
+  }
+}

@@ -1,0 +1,88 @@
+.qaWhyUsSection {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: left;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70rem;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.textContainer {
+  flex: 1 1 50%;
+  padding-right: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #63636a;
+  line-height: 1.5;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitsList li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 500;
+}
+
+.benefitsList li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/WhyUsWeb/tick.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.imageContainer {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qaImage {
+  max-width: 98%;
+  border-radius: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .textContainer {
+      flex: 1 1 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .imageContainer {
+      flex: 1 1 100%;
+  }
+}

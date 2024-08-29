@@ -1,53 +1,53 @@
 import React, { useState } from "react";
-import styles from "./DevelopmentProcess.module.css";
-import development from "../../assets/DevelopmentProcess/development.png";
-import planning from "../../assets/DevelopmentProcess/planning.png";
-import qa from "../../assets/DevelopmentProcess/qa.png";
-import prototype from "../../assets/DevelopmentProcess/prototype.png";
-import strategy from "../../assets/DevelopmentProcess/strategy.png";
+import styles from "./QADevProcess.module.css";
+import analysis from "../../assets/QADevProcess/analysis.png";
+import planning from "../../assets/QADevProcess/planning.png";
+import design from "../../assets/QADevProcess/design.png";
+import bugreport from "../../assets/QADevProcess/bugreport.png";
+import closure from "../../assets/QADevProcess/closure.png";
 
-const DevelopmentProcess = () => {
+const QADevProcess = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
 
   const steps = [
     {
       number: 0,
-      title: "Requirement Gathering",
+      title: "Requirement Analysis",
       description:
-        "Initially, we start with planning out a strategic idea of how we will be carrying out the entire web application development process. ",
+        "Here our QA team understands & researches your requirements, such as what is to be tested & tools etc. Analyzes the needs throughout the STLC phase identifies the tests to be performed and prepares Requirement Traceability Matrix (RTM).",
     },
     {
       number: 1,
-      title: "Design & Prototyping",
+      title: "Test Planning",
       description:
-        "To save ourselves from excessive obstacles, we discuss how the web app will perform and what results we should expect.   ",
+        "The QA manager decides the test plan strategy, project’s cost, tools, resource allocation, deadline, sprints and training requirements. Also determines the roles and responsibilities of each member and the types of testing necessary for the project.",
     },
     {
       number: 2,
-      title: "Development",
+      title: "Test Design",
       description:
-        "After the small details have been taken care of, we delve into the real challenge “the development phase”.",
+        "Here, the testing team records & reviews test cases and prepares test data. Also, decide the environments under which a work product is evaluated. Performs a smoke test on build & makes sure that software is fine- when further investigation starts.",
     },
     {
       number: 3,
-      title: "Testing & QA",
+      title: "Execution & Bug Reporting",
       description:
-        "Quality assurance (QA) is one major step in web app development because it ensures the web app is free from bugs and works without flaws. ",
+        "Testers execute all the test cases made in the test design part, run test scripts, report bugs & track defects. It also involves testing types such as performance testing, unit testing or cross-platform testing.",
     },
     {
       number: 4,
-      title: "Deployment & Support",
+      title: "Test Closure",
       description:
-        "Speaking of updates and maintenance, we work hard on your project even after the product is completely developed.  ",
+        "In the last step, we document a summary of the project's entire testing process, evaluate the test results and note the improvement areas so that you can identify action items for your future projects.",
     },
   ];
 
   const images = {
-    0: planning,
-    1: strategy,
-    2: prototype,
-    3: development,
-    4: qa,
+    0: analysis,
+    1: planning,
+    2: design,
+    3: bugreport,
+    4: closure,
   };
 
   const toggleExpand = (index) => {
@@ -93,7 +93,7 @@ const DevelopmentProcess = () => {
         </div>
         <div className={styles.rightColumn}>
           <img
-            src={images[expandedIndex] || images[1]}
+            src={images[expandedIndex] || images[0]}
             alt="Process Step"
             className={styles.image}
           />
@@ -103,4 +103,4 @@ const DevelopmentProcess = () => {
   );
 };
 
-export default DevelopmentProcess;
+export default QADevProcess;

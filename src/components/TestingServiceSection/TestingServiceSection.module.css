@@ -1,0 +1,152 @@
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top:70px;
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 25px;
+    padding: 2.0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s ease;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #e8e4e4;
+  }
+  
+  .card:hover {
+    border: 1px solid #007bff;
+  }
+  
+  .icon {
+    /* font-size: 2.5rem; */
+    margin-bottom: 1rem;
+    width:60px;
+  }
+  
+  .industryName {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+
+
+
+  .ctaContainer {
+    background-color: #1A73E8;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    max-width: 1200px;
+    margin: 100px auto; /* Center the container */
+}
+
+.ctaContainer h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.ctaButton {
+    padding: 10px 30px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top:20px;
+}
+
+.ctaButton:hover {
+    background-color: #e6a700;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .ctaContainer h2 {
+        font-size: 2em;
+    }
+
+    .ctaButton {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .ctaContainer h2 {
+        font-size: 1.5em;
+    }
+
+    .ctaButton {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+}

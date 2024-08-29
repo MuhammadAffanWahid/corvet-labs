@@ -1,9 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import QAHero from "../QAHero";
+import TestingServiceSection from "../TestingServiceSection";
 import QAServiceSection from "../QAServiceSection";
-import AppTechStack from "../AppTechStack";
-import FAQApp from "../FAQApp";
+import QAWhyUs from "../QAWhyUs";
+import QAFeatures from "../QAFeatures";
+import QAEngagement from "../QAEngagement";
+import QADevProcess from "../QADevProcess";
+import QATechStack from "../QATechStack";
+import QAStats from "../QAStats";
+import QAFAQ from "../QAFAQ";
+
 
 const AppDevService = () => {
   return (
@@ -35,17 +42,41 @@ const AppDevService = () => {
       <QAHero/>
       {/* Hero End */}
 
-      {/* WhyUsApp Start */}
+      {/* TestingServiceSection Start */}
+      <TestingServiceSection />
+      {/* TestingServiceSection End */}
+
+      {/* QAServiceSection Start */}
       <QAServiceSection />
-      {/* WhyUsApp End */}
+      {/* QAServiceSection End */}
 
-      {/* AppTechStack Start */}
-      <AppTechStack />
-      {/* AppTechStack End */}
+      {/* QAWhyUs Start */}
+      <QAWhyUs />
+      {/* QAWhyUs End */}
 
-      {/* AppTechStack Start */}
-      <FAQApp />
-      {/* AppTechStack End */}
+      {/* QAFeatures Start */}
+      <QAFeatures />
+      {/* QAFeatures End */}
+
+      {/* QAEngagement Start */}
+      <QAEngagement />
+      {/* QAEngagement End */}
+
+      {/* QADevProcess Start */}
+      <QADevProcess />
+      {/* QADevProcess End */}
+
+      {/* QATechStack Start */}
+      <QATechStack />
+      {/* QATechStack End */}
+
+      {/* QAStats Start */}
+      <QAStats />
+      {/* QAStats End */}
+
+      {/* QAFAQ Start */}
+      <QAFAQ />
+      {/* QAFAQ End */}
     </div>
   );
 };

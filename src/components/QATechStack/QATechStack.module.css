@@ -1,0 +1,212 @@
+/* .tabContainer {
+    width: 79%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom:100px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    border-right: 1px solid #d3d3d3;
+  }
+  
+  button:last-child {
+    border-right: none;
+  }
+  
+  .active {
+    background-color: #2275ff;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+  
+  .imageBox {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid #e8e4e4;
+  }
+  
+  .imageBox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #007bff;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .imageLabel {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+   */
+   .tabContainer {
+    width: 79%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+  }
+  
+  button {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    border-right: 1px solid #d3d3d3;
+  }
+  
+  button:last-child {
+    border-right: none;
+  }
+  
+  .active {
+    background-color: #2275ff;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+  }
+  
+  .imageBox {
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid #e8e4e4;
+  }
+  
+  .imageBox:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #007bff;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .imageLabel {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .tabs {
+      display: block; /* Stack tabs vertically on small screens */
+    }
+  
+    button {
+      width: 100%; /* Make each button take full width */
+      border-right: none; /* Remove right border when stacked vertically */
+      border-bottom: 1px solid #d3d3d3; /* Add bottom border for separation */
+    }
+  
+    button:last-child {
+      border-bottom: none; /* Remove border on the last button */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem; /* Slightly smaller title font size on small screens */
+    }
+  
+    .description {
+      font-size: 0.9rem; /* Slightly smaller description font size */
+    }
+  
+    .imageBox {
+      padding: 8px; /* Slightly reduce padding inside the image box */
+    }
+  }
