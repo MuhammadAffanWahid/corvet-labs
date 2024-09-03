@@ -1,109 +1,178 @@
-.contain{
-    margin-top: 68px;
-    margin-bottom: 68px;
+.formContainer {
+    max-width: 1100px;
+    margin: 40px auto; /* Add some margin at the top and bottom */
+    padding: 30px; /* Add padding inside the form */
+    border: 1px solid #e0e0e0; /* Add a light gray border */
+    border-radius: 20px; /* Slightly round the corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+    background-color: #ffffff; /* Set background color to white */
 }
-.heading{
-    font-family: 'Poppins';
-    font-size: 40px;
-    color: #222a41;
+
+.heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
     font-weight: bold;
-    /* margin-bottom: 76px; */
-    width: 400px;
+    color: #000;
+    text-align: left; /* Left align the heading */
+    margin-bottom: 10px;
 }
-.head{
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: #222a41;
-    font-weight: bold;
-    margin-top: 76px;
-}
-.content{
-    font-family: 'Poppins';
-    font-size: 20px;
-    color: #232323;
-    opacity: 0.6;
-    margin-bottom: 5px;
-}
-.email{
-    font-family: 'Poppins';
-    font-size: 30px;
-    color: #222a41;
-    font-weight: bold;
-    margin-top: 43px;
-    margin-bottom: 43px;
-}
-.label{
-    font-family: 'Poppins';
+
+.subHeading {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: #232323;
-    margin-bottom: 9px;
-    margin-left: 10px;
+    color: #333;
+    text-align: left; /* Left align the subheading */
+    margin-bottom: 30px;
 }
-.msg{
-    height: 183px !important; 
-    padding-top: 15px;
+
+.radioGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    flex-direction: column; /* Stack radio buttons vertically by default */
+    align-items: flex-start; /* Align radio buttons to the left */
 }
-.input{
-    width: 100%;
+
+.radioLabel {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-align: left; /* Left align the radio labels */
+    margin-bottom: 10px; /* Add some spacing between radio buttons */
+}
+
+.radioLabel input {
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+.tooltip {
+    position: absolute;
+    top: -45px;
+    left: 0;
     background-color: #f7f7f7;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack inputs vertically by default */
+}
+
+.input {
+    width: 100%; /* Full width inputs by default */
+    padding: 12px;
+    border: 1px solid #e8e8e8;
     border-radius: 6px;
-    border: solid 1px #e8e8e8;
-    height: 60px;
-    margin: 9px 0px 20px;
-    padding-left: 15px;
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-align: left; /* Left align text inside inputs */
+    margin-bottom: 20px; /* Add margin between stacked inputs */
 }
-.input:focus{
-    outline: none;
-    border: solid 1px #afacac;
+
+.inputFullWidth {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left; /* Left align text inside inputs */
 }
-.btn{
+
+.textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left; /* Left align text inside textarea */
+}
+
+.checkboxGroup {
+    margin-bottom: 20px;
+    text-align: left; /* Left align the checkboxes */
+}
+
+.checkboxLabel {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left; /* Left align the checkbox labels */
+}
+
+.checkboxLabel input {
+    margin-right: 8px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    height: 60px;
-    width: 160px;
-    border-radius: 5px !important;
-    margin-top: 37px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center; /* Left align the button text */
 }
 
-@media screen and (max-width: 1200px) {
-    .heading{
-        font-size: 30px;
-    }
-    .head{
-        font-size: 18px;
-        margin-top: 50px;
-    }
-    .content{
-        font-size: 18px;
-    }
-    .email{
-        font-size: 25px;
-    }
+.submitButton:hover {
+    background-color: #0056b3;
 }
 
-@media screen and (max-width: 768px){
-    .heading{
-        width: 100%;
-    }
-    .head{
-        margin-top: 30px;
-    }
+.recaptcha {
+    display: flex;
+    justify-content: flex-start; /* Align the reCAPTCHA to the left */
+    margin-top: 20px;
 }
 
-@media screen and (max-width: 600px){
-    .heading{
-        font-size: 23px;
+/* Media query for larger screens (like laptops) */
+@media screen and (min-width: 768px) {
+    .radioGroup {
+        flex-direction: row; /* Align radio buttons in a row on larger screens */
+        align-items: center; /* Center align vertically in the row */
     }
-    .head{
-        margin-top: 25px;
-        font-size: 16px;
+
+    .inputGroup {
+        flex-direction: row; /* Align inputs in a row on larger screens */
     }
-    .content{
-        font-size: 16px;
+
+    .input {
+        width: 48%; /* Set input width to 48% to fit two inputs in a row with some space between */
+        margin-bottom: 0; /* Remove bottom margin in row layout */
     }
-    .label{
-        font-size: 14px;
-    }
-    .input{
-        height: 40px;
+
+    .inputFullWidth {
+        width: 100%; /* Keep full-width inputs the same */
     }
 }
