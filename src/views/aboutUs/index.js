@@ -2,7 +2,7 @@ import React from "react";
 // import bg from '../../assets/aboutUs/banner.png';
 // import SubBanner from '../../components/SubBanner';
 import Footer from "../../components/Footer";
-import Top from "../../components/AboutUs/Top";
+// import Top from "../../components/AboutUs/Top";
 // import Middle from "../../components/AboutUs/Middle";
 // import Bottom from "../../components/AboutUs/Bottom";
 import AboutUsHero from "../../components/AboutUsHero";
