@@ -1,0 +1,115 @@
+.ceoMessageSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ensure children stretch to the full height of the parent */
+  background-color: #f9f9f9;
+  padding: 60px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  height: 800px; /* Set a fixed height */
+  max-width: 1200px; /* Max width for the entire section */
+  margin: 60px auto; /* Center the section */
+}
+
+.messageContent {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ceoProfile {
+  flex: 0 1 300px;
+  text-align: center;
+  background-color: #0066ff;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ensure content in profile stacks vertically */
+  justify-content: center; /* Center content vertically */
+  height: 100%; /* Full height of the container */
+}
+
+.ceoImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-bottom: 15px; */
+  margin:15px auto;
+  border: 4px solid white;
+}
+
+.ceoDetails {
+  margin-top: 10px;
+}
+
+.ceoName {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ceoTitle {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: white;
+}
+
+.ceoLinks {
+  margin-top: 15px;
+}
+
+.socialIcon {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socialIcon:hover {
+  color: #ddd; /* Slight color change on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ceoMessageSection {
+    flex-direction: column;
+    text-align: left;
+    height: auto; /* Reset height for mobile */
+    padding: 40px 20px;
+  }
+
+  .messageContent {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .ceoProfile {
+    width: 100%;
+    margin-top: 20px;
+    height: auto; /* Reset height on mobile */
+  }
+}

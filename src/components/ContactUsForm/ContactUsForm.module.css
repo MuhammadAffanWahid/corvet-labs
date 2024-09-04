@@ -1,11 +1,55 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    justify-content: center;
+    align-items: stretch; /* Ensure both columns stretch to the full height */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 20px;
+}
+
+.infoSection {
+    flex: 1;
+    margin: 10px; /* Space between the columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: #FAFAFA;
+    border-radius:20px;
+    padding:15px;
+    width: 90%;
+}
+
+.formSection {
+    flex: 1;
+    margin: 10px; /* Space between the columns */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:15px;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+@media (max-width: 768px) {
+    .formSection,
+    .infoSection {
+        flex: 100%; /* Full width on smaller screens */
+        margin-left: 0px; /* No margin on mobile */
+    }
+
+    .container {
+        margin: 10px; /* No margin on mobile */
+    }
+}
+
 .formContainer {
-    max-width: 1100px;
-    margin: 40px auto; /* Add some margin at the top and bottom */
-    padding: 30px; /* Add padding inside the form */
-    border: 1px solid #e0e0e0; /* Add a light gray border */
-    border-radius: 20px; /* Slightly round the corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
-    background-color: #ffffff; /* Set background color to white */
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
 }
 
 .heading {
@@ -13,7 +57,7 @@
     font-size: 32px;
     font-weight: bold;
     color: #000;
-    text-align: left; /* Left align the heading */
+    text-align: left;
     margin-bottom: 10px;
 }
 
@@ -21,17 +65,17 @@
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #333;
-    text-align: left; /* Left align the subheading */
+    text-align: left;
     margin-bottom: 30px;
 }
 
 .radioGroup {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
     position: relative;
-    flex-direction: column; /* Stack radio buttons vertically by default */
-    align-items: flex-start; /* Align radio buttons to the left */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .radioLabel {
@@ -42,8 +86,8 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    text-align: left; /* Left align the radio labels */
-    margin-bottom: 10px; /* Add some spacing between radio buttons */
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .radioLabel input {
@@ -70,21 +114,21 @@
 
 .inputGroup {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 20px;
-    flex-direction: column; /* Stack inputs vertically by default */
+    flex-direction: column;
 }
 
 .input {
-    width: 100%; /* Full width inputs by default */
+    width: 100%;
     padding: 12px;
     border: 1px solid #e8e8e8;
     border-radius: 6px;
     background-color: #f7f7f7;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    text-align: left; /* Left align text inside inputs */
-    margin-bottom: 20px; /* Add margin between stacked inputs */
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .inputFullWidth {
@@ -96,7 +140,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     margin-bottom: 20px;
-    text-align: left; /* Left align text inside inputs */
+    text-align: left;
 }
 
 .textarea {
@@ -109,12 +153,12 @@
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     margin-bottom: 20px;
-    text-align: left; /* Left align text inside textarea */
+    text-align: left;
 }
 
 .checkboxGroup {
     margin-bottom: 20px;
-    text-align: left; /* Left align the checkboxes */
+    text-align: left;
 }
 
 .checkboxLabel {
@@ -124,7 +168,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    text-align: left; /* Left align the checkbox labels */
 }
 
 .checkboxLabel input {
@@ -143,36 +186,31 @@
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 20px;
-    text-align: center; /* Left align the button text */
+    text-align: center;
 }
 
 .submitButton:hover {
     background-color: #0056b3;
 }
 
-.recaptcha {
-    display: flex;
-    justify-content: flex-start; /* Align the reCAPTCHA to the left */
-    margin-top: 20px;
+.infoBox h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 50px;
 }
 
-/* Media query for larger screens (like laptops) */
-@media screen and (min-width: 768px) {
-    .radioGroup {
-        flex-direction: row; /* Align radio buttons in a row on larger screens */
-        align-items: center; /* Center align vertically in the row */
-    }
+.infoItem h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
 
-    .inputGroup {
-        flex-direction: row; /* Align inputs in a row on larger screens */
-    }
-
-    .input {
-        width: 48%; /* Set input width to 48% to fit two inputs in a row with some space between */
-        margin-bottom: 0; /* Remove bottom margin in row layout */
-    }
-
-    .inputFullWidth {
-        width: 100%; /* Keep full-width inputs the same */
-    }
+.infoItem p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #555;
 }

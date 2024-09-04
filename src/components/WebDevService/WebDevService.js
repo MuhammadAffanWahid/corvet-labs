@@ -24,6 +24,7 @@ import DevelopmentProcess from "../DevelopmentProcess";
 import WebStats from "../WebStats";
 import WhyUs from "../WhyUsWeb";
 import FAQ from "../FAQ";
+import ContactUsForm from "../ContactUsForm";
  
 
 
@@ -171,12 +172,9 @@ const AppDevService = () => {
       <DevelopmentProcess />
       {/* DevelopmentProcess end */}
 
-
-
       {/* WebStats Start */}
       <WebStats />
       {/* WebStats end */}
-
 
       {/* WhyUs Start */}
       <WhyUs />
@@ -185,6 +183,11 @@ const AppDevService = () => {
       {/* FAQ Start */}
       <FAQ />
       {/* FAQ end */}
+
+      {/* ContactUsForm Start */}
+      <ContactUsForm />
+      {/* ContactUsForm end */}
+
     </div>
   );
 };

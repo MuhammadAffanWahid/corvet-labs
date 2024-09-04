@@ -1,0 +1,66 @@
+.statsSection {
+  max-width: 1200px;
+  margin: 60px auto;
+  margin-top: 160px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subHeading {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tiles per row */
+  gap: 20px;
+}
+
+.tile {
+  border: 2px solid transparent;
+  padding: 40px 20px;
+  background-color: #f0f4ff; /* Light blue background */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.tile:hover {
+  border-color: #0066ff; /* Blue border on hover */
+}
+
+.number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 tiles per row on tablet and mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr; /* 1 tile per row on small mobile */
+  }
+}

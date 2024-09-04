@@ -6,6 +6,7 @@ import AppDevProcess from "../AppDevProcess";
 import AppFeatureGrid from "../AppFeatureGrid";
 import AppTechStack from "../AppTechStack";
 import FAQApp from "../FAQApp";
+import ContactUsForm from "../ContactUsForm";
 
 const AppDevService = () => {
   return (
@@ -56,6 +57,10 @@ const AppDevService = () => {
       {/* AppTechStack Start */}
       <FAQApp />
       {/* AppTechStack End */}
+
+      {/* ContactUsForm Start */}
+      <ContactUsForm />
+      {/* ContactUsForm End */}
     </div>
   );
 };

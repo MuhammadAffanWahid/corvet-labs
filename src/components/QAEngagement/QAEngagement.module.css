@@ -5,7 +5,7 @@
   text-align: center;
   border-radius: 20px; /* Rounded corners */
   max-width: 70rem;
-  margin: 150px auto; /* Adjusted margin to align with reduced height */
+  margin: 250px auto; /* Adjusted margin to align with reduced height */
   position: relative;
   overflow: visible; /* Allows elements to overflow */
   height:15rem;

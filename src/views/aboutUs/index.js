@@ -1,33 +1,56 @@
 import React from "react";
-import bg from '../../assets/aboutUs/banner.png';
-import SubBanner from '../../components/SubBanner';
+// import bg from '../../assets/aboutUs/banner.png';
+// import SubBanner from '../../components/SubBanner';
 import Footer from "../../components/Footer";
 import Top from "../../components/AboutUs/Top";
-import Middle from "../../components/AboutUs/Middle";
-import Bottom from "../../components/AboutUs/Bottom";
+// import Middle from "../../components/AboutUs/Middle";
+// import Bottom from "../../components/AboutUs/Bottom";
+import AboutUsHero from "../../components/AboutUsHero";
+import CEOMessage from "../../components/CEOMessage";
+import AboutUsVision from "../../components/AboutUsVision";
+import AboutUsStats from "../../components/AboutUsStats";
+import QAEngagement from "../../components/QAEngagement";
+import ContactUsForm from "../../components/ContactUsForm";
+
+
 
 const aboutUs = () => {
   return (
     <>
       {/* Banner Section  */}
-      <section>
+      {/* <section>
         <SubBanner heading='About Us' subHeading='Home /About Us' img={bg}/>
-      </section>
+      </section> */}
 
+      <AboutUsHero />
+
+      <CEOMessage/>
+
+      <AboutUsVision/>
+
+      <AboutUsStats/>
+
+
+       <QAEngagement />
+
+       <ContactUsForm />
+      {/* <section>
+        <Contact />
+      </section> */}
       {/* Top Section  */}
-      <section>
+      {/* <section>
         <Top />
-      </section>
+      </section> */}
 
       {/* Middle Section  */}
-      <section>
+      {/* <section>
         <Middle />
-      </section>
+      </section> */}
 
       {/* Bottom Section  */}
-      <section>
+      {/* <section>
         <Bottom />
-      </section>
+      </section> */}
 
       {/* Footer Section  */}
       <section>

@@ -1,0 +1,81 @@
+.visionMissionSection {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.visionSection, .missionSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.visionSection {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+.missionSection {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+.image {
+  flex: 1;
+  max-width: 50%; /* Limit the width of the images to 50% */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px; /* Space between image and text */
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.textContent {
+  flex: 1;
+  text-align: left;
+  max-width: 50%; /* Limit the width of the text content to 50% */
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 0.86rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .visionSection, .missionSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+  max-width: 100%; /* Limit the width of the images to 50% */
+    width: 100%;
+    margin: 20px 0;
+    padding:0;
+  }
+
+  .textContent {
+  max-width: 100%; /* Limit the width of the images to 50% */
+    width: 100%;
+    text-align: center;
+    padding:0;
+
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+  
+}

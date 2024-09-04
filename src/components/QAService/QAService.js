@@ -10,6 +10,7 @@ import QADevProcess from "../QADevProcess";
 import QATechStack from "../QATechStack";
 import QAStats from "../QAStats";
 import QAFAQ from "../QAFAQ";
+import ContactUsForm from "../ContactUsForm";
 
 
 const AppDevService = () => {
@@ -77,6 +78,10 @@ const AppDevService = () => {
       {/* QAFAQ Start */}
       <QAFAQ />
       {/* QAFAQ End */}
+
+      {/* ContactUsForm Start */}
+        <ContactUsForm />
+      {/* ContactUsForm End */}
     </div>
   );
 };
