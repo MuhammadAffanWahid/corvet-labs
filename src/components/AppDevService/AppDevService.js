@@ -34,33 +34,19 @@ const AppDevService = () => {
         <link href="css/style.min.css" rel="stylesheet" type="text/css" />
       </Helmet>
 
-      {/* Hero Start */}
       <HeroSection />
-      {/* Hero End */}
 
-      {/* WhyUsApp Start */}
       <WyUsAppPage />
-      {/* WhyUsApp End */}
 
-      {/* AppDevProcess Start */}
       <AppDevProcess />
-      {/* AppDevProcess End */}
 
-      {/* AppFeatureGrid Start */}
       <AppFeatureGrid />
-      {/* AppFeatureGrid End */}
 
-      {/* AppTechStack Start */}
       <AppTechStack />
-      {/* AppTechStack End */}
 
-      {/* AppTechStack Start */}
       <FAQApp />
-      {/* AppTechStack End */}
 
-      {/* ContactUsForm Start */}
       <ContactUsForm />
-      {/* ContactUsForm End */}
     </div>
   );
 };

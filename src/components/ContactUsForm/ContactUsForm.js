@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from './ContactUsForm.module.css';
+import { contactUsFormContent } from '../../content'; // Import the content
 
 const ContactUsForm = () => {
     const [formContent, setFormContent] = useState({});
@@ -18,50 +19,31 @@ const ContactUsForm = () => {
         setTooltip(prev => (prev === option ? null : option));
     };
 
+    const { heading, subHeading, serviceOptions, formFields, infoSection } = contactUsFormContent;
+
     return (
         <div className={styles.container}>
             <div className={styles.formSection}>
                 <div className={styles.formContainer}>
-                    <h1 className={styles.heading}>We Got Your Back</h1>
-                    <p className={styles.subHeading}>Submit a short brief to build, launch and grow.</p>
+                    <h1 className={styles.heading}>{heading}</h1>
+                    <p className={styles.subHeading}>{subHeading}</p>
 
                     <div className={styles.radioGroup}>
-                        <label
-                            className={styles.radioLabel}
-                            onMouseEnter={() => setTooltip('Staff Augmentation')}
-                            onMouseLeave={() => setTooltip(null)}
-                            onClick={() => handleTooltipToggle('Staff Augmentation')}
-                        >
-                            <input type="radio" name="serviceType" value="Staff Augmentation" />
-                            Staff Augmentation
-                            {tooltip === 'Staff Augmentation' && (
-                                <div className={styles.tooltip}>Enhance your existing team with skilled professionals.</div>
-                            )}
-                        </label>
-                        <label
-                            className={styles.radioLabel}
-                            onMouseEnter={() => setTooltip('Dedicated Teams')}
-                            onMouseLeave={() => setTooltip(null)}
-                            onClick={() => handleTooltipToggle('Dedicated Teams')}
-                        >
-                            <input type="radio" name="serviceType" value="Dedicated Teams" />
-                            Dedicated Teams
-                            {tooltip === 'Dedicated Teams' && (
-                                <div className={styles.tooltip}>Assemble the teams tailored to your business goals.</div>
-                            )}
-                        </label>
-                        <label
-                            className={styles.radioLabel}
-                            onMouseEnter={() => setTooltip('Fixed Gigs')}
-                            onMouseLeave={() => setTooltip(null)}
-                            onClick={() => handleTooltipToggle('Fixed Gigs')}
-                        >
-                            <input type="radio" name="serviceType" value="Fixed Gigs" />
-                            Fixed Gigs
-                            {tooltip === 'Fixed Gigs' && (
-                                <div className={styles.tooltip}>Get project-based work done with clear deliverables.</div>
-                            )}
-                        </label>
+                        {serviceOptions.map(option => (
+                            <label
+                                key={option.value}
+                                className={styles.radioLabel}
+                                onMouseEnter={() => setTooltip(option.value)}
+                                onMouseLeave={() => setTooltip(null)}
+                                onClick={() => handleTooltipToggle(option.value)}
+                            >
+                                <input type="radio" name="serviceType" value={option.value} />
+                                {option.label}
+                                {tooltip === option.value && (
+                                    <div className={styles.tooltip}>{option.tooltip}</div>
+                                )}
+                            </label>
+                        ))}
                     </div>
 
                     <div className={styles.inputGroup}>
@@ -71,7 +53,7 @@ const ContactUsForm = () => {
                             onChange={handleChange}
                             className={styles.input}
                             type="text"
-                            placeholder="Full name*"
+                            placeholder={formFields.name}
                         />
                         <input
                             name="contactNumber"
@@ -79,7 +61,7 @@ const ContactUsForm = () => {
                             onChange={handleChange}
                             className={styles.input}
                             type="text"
-                            placeholder="Contact Number"
+                            placeholder={formFields.contactNumber}
                         />
                     </div>
 
@@ -89,7 +71,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         className={styles.inputFullWidth}
                         type="email"
-                        placeholder="Email*"
+                        placeholder={formFields.email}
                     />
 
                     <input
@@ -98,7 +80,7 @@ const ContactUsForm = () => {
                         onChange={handleChange}
                         className={styles.inputFullWidth}
                         type="text"
-                        placeholder="Enter your preferred tech stack..."
+                        placeholder={formFields.techStack}
                     />
 
                     <textarea
@@ -106,21 +88,21 @@ const ContactUsForm = () => {
                         value={formContent.message || ''}
                         onChange={handleChange}
                         className={styles.textarea}
-                        placeholder="Tell us how we can help.*"
+                        placeholder={formFields.message}
                     />
 
                     <div className={styles.checkboxGroup}>
                         <label className={styles.checkboxLabel}>
                             <input type="checkbox" name="getNDA" />
-                            Get NDA
+                            {formFields.getNDA}
                         </label>
                         <label className={styles.checkboxLabel}>
                             <input type="checkbox" name="terms" />
-                            I understand and agree to the terms & conditions.
+                            {formFields.terms}
                         </label>
                     </div>
 
-                    <button className={styles.submitButton}>Send Message</button>
+                    <button className={styles.submitButton}>{formFields.submitButton}</button>
 
                     <div className={styles.recaptcha}>
                         <div className="g-recaptcha" data-sitekey="your_site_key"></div>
@@ -130,27 +112,13 @@ const ContactUsForm = () => {
 
             <div className={styles.infoSection}>
                 <div className={styles.infoBox}>
-                    <h2>Corvet Labs, In A Nutshell</h2>
-                    <div className={styles.infoItem}>
-                        <h3>Top Talent Pool</h3>
-                        <p>We have a well-established community of 500+ field-experienced software developers.</p>
-                    </div>
-                    <div className={styles.infoItem}>
-                        <h3>Quick Response</h3>
-                        <p>Our team will share CVs within 48 hours.</p>
-                    </div>
-                    <div className={styles.infoItem}>
-                        <h3>Wallet-friendly Pricing</h3>
-                        <p>Our well-engineered hiring practices eliminate additional costs by 50%.</p>
-                    </div>
-                    <div className={styles.infoItem}>
-                        <h3>Proven Track Record</h3>
-                        <p>Our developers have successfully completed over 1,000 projects across diverse industries, guaranteeing high-quality results.</p>
-                    </div>
-                    <div className={styles.infoItem}>
-                        <h3>Ongoing Support</h3>
-                        <p>Our commitment doesn't end at hiring; we provide continuous support and follow-up to ensure seamless integration and satisfaction.</p>
-                    </div>
+                    <h2>{infoSection.title}</h2>
+                    {infoSection.items.map((item, index) => (
+                        <div key={index} className={styles.infoItem}>
+                            <h3>{item.heading}</h3>
+                            <p>{item.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

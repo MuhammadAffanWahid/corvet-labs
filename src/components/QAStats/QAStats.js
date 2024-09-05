@@ -1,25 +1,24 @@
 import React from "react";
 import styles from "./QAStats.module.css";
+import { qaStatsContent } from "../../content"; // Import content
 
 const QAStats = () => {
+  const { heading, ctaButton, stats } = qaStatsContent;
+
   return (
     <section className={styles.qaStatsSection}>
       <div className={styles.contentContainer}>
         <div className={styles.textContainer}>
-          <h2 className={styles.heading}>
-            Not only do we kill bugs, but we also boost the speed, responsiveness, and overall performance of your website.
-          </h2>
-          <button className={styles.ctaButton}>Request A Free Quote</button>
+          <h2 className={styles.heading}>{heading}</h2>
+          <button className={styles.ctaButton}>{ctaButton}</button>
         </div>
         <div className={styles.statsContainer}>
-          <div className={styles.stat}>
-            <h3 className={styles.statNumber}>300+</h3>
-            <p className={styles.statDescription}>Project Completion</p>
-          </div>
-          <div className={styles.stat}>
-            <h3 className={styles.statNumber}>10+</h3>
-            <p className={styles.statDescription}>Years Of Project Experience</p>
-          </div>
+          {stats.map((stat, index) => (
+            <div key={index} className={styles.stat}>
+              <h3 className={styles.statNumber}>{stat.number}</h3>
+              <p className={styles.statDescription}>{stat.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
