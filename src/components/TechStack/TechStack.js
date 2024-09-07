@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./TechStack.module.css";
 import { techStackContent } from '../../content'; // Import content
 
+const preloadImages = (images) => {
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = image.src;
+  });
+};
+
 const TabbedGallery = () => {
   const [activeTab, setActiveTab] = useState("frontend");
+
+  // Preload all images when component mounts
+  useEffect(() => {
+    const allImages = Object.values(techStackContent).flat();
+    preloadImages(allImages);
+  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);

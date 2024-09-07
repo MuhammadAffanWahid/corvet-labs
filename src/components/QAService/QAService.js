@@ -13,12 +13,12 @@ import QAFAQ from "../QAFAQ";
 import ContactUsForm from "../ContactUsForm";
 
 
-const AppDevService = () => {
+const QAService = () => {
   return (
     <div>
-      <Helmet>
+      {/* <Helmet>
         <meta charset="utf-8" />
-        <title>Appgen - App & Saas Landing Template</title>
+        <title>Corvet Labs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="App and Saas Landing Template" />
         <meta
@@ -37,53 +37,31 @@ const AppDevService = () => {
         <link rel="stylesheet" href="css/tiny-slider.css" />
         <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-      </Helmet>
+      </Helmet> */}
 
-      {/* Hero Start */}
       <QAHero/>
-      {/* Hero End */}
 
-      {/* TestingServiceSection Start */}
       <TestingServiceSection />
-      {/* TestingServiceSection End */}
 
-      {/* QAServiceSection Start */}
       <QAServiceSection />
-      {/* QAServiceSection End */}
 
-      {/* QAWhyUs Start */}
       <QAWhyUs />
-      {/* QAWhyUs End */}
 
-      {/* QAFeatures Start */}
       <QAFeatures />
-      {/* QAFeatures End */}
 
-      {/* QAEngagement Start */}
       <QAEngagement />
-      {/* QAEngagement End */}
 
-      {/* QADevProcess Start */}
       <QADevProcess />
-      {/* QADevProcess End */}
 
-      {/* QATechStack Start */}
       <QATechStack />
-      {/* QATechStack End */}
 
-      {/* QAStats Start */}
       <QAStats />
-      {/* QAStats End */}
 
-      {/* QAFAQ Start */}
       <QAFAQ />
-      {/* QAFAQ End */}
 
-      {/* ContactUsForm Start */}
         <ContactUsForm />
-      {/* ContactUsForm End */}
     </div>
   );
 };
 
-export default AppDevService;
+export default QAService;

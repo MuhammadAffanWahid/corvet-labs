@@ -20,35 +20,35 @@ const routes = [
     },
     {
         components: <ContactUs />,
-        to: '/contactUs'
+        to: '/contact-us'
     },
     {
         components: <IndividualService />,
-        to: '/individualService'
+        to: '/individual-service'
     },
     {
         components: <AboutUs />,
-        to: '/aboutUs'
+        to: '/about-us'
     },
     {
         components: <ProjectDetails />,
-        to: '/projectDetails'
+        to: '/project-details'
     },
     {
         components: <SMediaService />,
-        to: '/sMediaService'
+        to: '/social-media-service'
     },
     {
         components: <AppDevService />,
-        to: '/AppDevService'
+        to: '/app-dev-service'
     },
     {
         components: <WebDevService />,
-        to: '/WebDevService'
+        to: '/web-dev-service'
     },
     {
         components: <QAService />,
-        to: '/QAService'
+        to: '/qa-service'
     }
 ];
 

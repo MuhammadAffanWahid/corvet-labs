@@ -10,7 +10,7 @@ import WhyUs from "../WhyUsWeb";
 import FAQ from "../FAQ";
 import ContactUsForm from "../ContactUsForm";
 
-const AppDevService = () => {
+const WebDevService = () => {
   const { hero, clients, downloadSvg, industries, servicesTitle, servicesSubtitle, servicesDescription } = appDevServiceContent;
 
   return (
@@ -113,4 +113,4 @@ const AppDevService = () => {
   );
 };
 
-export default AppDevService;
+export default WebDevService;

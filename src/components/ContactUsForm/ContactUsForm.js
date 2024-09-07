@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import styles from './ContactUsForm.module.css';
 import { contactUsFormContent } from '../../content'; // Import the content
 
 const ContactUsForm = () => {
-    const [formContent, setFormContent] = useState({});
-    const [tooltip, setTooltip] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState("");
+    const form = useRef();  // useRef for the form
 
-    const handleChange = (event) => {
-        const { value, name } = event.target;
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
 
-        setFormContent(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleTooltipToggle = (option) => {
-        setTooltip(prev => (prev === option ? null : option));
+        emailjs.sendForm('service_yxh7cfe', 'template_k53npoh', form.current, {
+            publicKey: '1cVCZ6R1bGo6efBGC',
+        })
+        .then(
+            () => {
+                setIsSubmitting(false);
+                setSubmitMessage("Message sent successfully!");
+                form.current.reset();  // Reset form after successful submission
+            },
+            (error) => {
+                setIsSubmitting(false);
+                setSubmitMessage("An error occurred. Please try again.");
+                console.log('FAILED...', error.text);
+            }
+        );
     };
 
     const { heading, subHeading, serviceOptions, formFields, infoSection } = contactUsFormContent;
@@ -28,85 +38,72 @@ const ContactUsForm = () => {
                     <h1 className={styles.heading}>{heading}</h1>
                     <p className={styles.subHeading}>{subHeading}</p>
 
-                    <div className={styles.radioGroup}>
-                        {serviceOptions.map(option => (
-                            <label
-                                key={option.value}
-                                className={styles.radioLabel}
-                                onMouseEnter={() => setTooltip(option.value)}
-                                onMouseLeave={() => setTooltip(null)}
-                                onClick={() => handleTooltipToggle(option.value)}
-                            >
-                                <input type="radio" name="serviceType" value={option.value} />
-                                {option.label}
-                                {tooltip === option.value && (
-                                    <div className={styles.tooltip}>{option.tooltip}</div>
-                                )}
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div className={styles.radioGroup}>
+                            {serviceOptions.map(option => (
+                                <label key={option.value} className={styles.radioLabel}>
+                                    <input type="radio" name="serviceType" value={option.value} />
+                                    {option.label}
+                                </label>
+                            ))}
+                        </div>
+
+                        <div className={styles.inputGroup}>
+                            <input
+                                name="user_name"
+                                className={styles.input}
+                                type="text"
+                                placeholder={formFields.name}
+                            />
+                            <input
+                                name="contactNumber"
+                                className={styles.input}
+                                type="text"
+                                placeholder={formFields.contactNumber}
+                            />
+                        </div>
+
+                        <input
+                            name="user_email"
+                            className={styles.inputFullWidth}
+                            type="email"
+                            placeholder={formFields.email}
+                        />
+
+                        <input
+                            name="techStack"
+                            className={styles.inputFullWidth}
+                            type="text"
+                            placeholder={formFields.techStack}
+                        />
+
+                        <textarea
+                            name="message"
+                            className={styles.textarea}
+                            placeholder={formFields.message}
+                        />
+
+                        <div className={styles.checkboxGroup}>
+                            <label className={styles.checkboxLabel}>
+                                <input type="checkbox" name="getNDA" />
+                                {formFields.getNDA}
                             </label>
-                        ))}
-                    </div>
+                            <label className={styles.checkboxLabel}>
+                                <input type="checkbox" name="terms" />
+                                {formFields.terms}
+                            </label>
+                        </div>
 
-                    <div className={styles.inputGroup}>
-                        <input
-                            name="name"
-                            value={formContent.name || ''}
-                            onChange={handleChange}
-                            className={styles.input}
-                            type="text"
-                            placeholder={formFields.name}
-                        />
-                        <input
-                            name="contactNumber"
-                            value={formContent.contactNumber || ''}
-                            onChange={handleChange}
-                            className={styles.input}
-                            type="text"
-                            placeholder={formFields.contactNumber}
-                        />
-                    </div>
+                        <button className={styles.submitButton} type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? "Sending..." : formFields.submitButton}
+                        </button>
 
-                    <input
-                        name="email"
-                        value={formContent.email || ''}
-                        onChange={handleChange}
-                        className={styles.inputFullWidth}
-                        type="email"
-                        placeholder={formFields.email}
-                    />
+                        {submitMessage && <p>{submitMessage}</p>}
 
-                    <input
-                        name="techStack"
-                        value={formContent.techStack || ''}
-                        onChange={handleChange}
-                        className={styles.inputFullWidth}
-                        type="text"
-                        placeholder={formFields.techStack}
-                    />
-
-                    <textarea
-                        name="message"
-                        value={formContent.message || ''}
-                        onChange={handleChange}
-                        className={styles.textarea}
-                        placeholder={formFields.message}
-                    />
-
-                    <div className={styles.checkboxGroup}>
-                        <label className={styles.checkboxLabel}>
-                            <input type="checkbox" name="getNDA" />
-                            {formFields.getNDA}
-                        </label>
-                        <label className={styles.checkboxLabel}>
-                            <input type="checkbox" name="terms" />
-                            {formFields.terms}
-                        </label>
-                    </div>
-
-                    <button className={styles.submitButton}>{formFields.submitButton}</button>
-
-                    <div className={styles.recaptcha}>
-                        <div className="g-recaptcha" data-sitekey="your_site_key"></div>
-                    </div>
+                        <div className={styles.recaptcha}>
+                            <div className="g-recaptcha" data-sitekey="your_site_key"></div>
+                        </div>
+                    </form>
                 </div>
             </div>
 

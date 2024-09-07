@@ -11,9 +11,9 @@ import ContactUsForm from "../ContactUsForm";
 const AppDevService = () => {
   return (
     <div>
-      <Helmet>
+      {/* <Helmet>
         <meta charset="utf-8" />
-        <title>Appgen - App & Saas Landing Template</title>
+        <title>Corvet Labs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="App and Saas Landing Template" />
         <meta
@@ -32,7 +32,7 @@ const AppDevService = () => {
         <link rel="stylesheet" href="css/tiny-slider.css" />
         <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
         <link href="css/style.min.css" rel="stylesheet" type="text/css" />
-      </Helmet>
+      </Helmet> */}
 
       <HeroSection />
 
