@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./WebDevService.module.css";
-import { Helmet } from "react-helmet";
 import { appDevServiceContent } from '../../content'; // Import content
 import TechStack from "../TechStack";
 import WebServiceSection from "../WebServiceSection";
@@ -15,10 +14,6 @@ const WebDevService = () => {
 
   return (
     <div>
-      <Helmet>
-        {/* Helmet meta tags */}
-      </Helmet>
-
       {/* Hero Start */}
       <section
         className="bg-half-170 app-home-wrapper d-table w-100 overflow-hidden"
